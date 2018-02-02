@@ -17,6 +17,7 @@ import {LoginPage} from "../pages/login/login";
     MyApp,
     AboutPage,
     ContactPage,
+
     HomePage,
     TabsPage,
     LoginPage
@@ -31,6 +32,7 @@ import {LoginPage} from "../pages/login/login";
     MyApp,
     AboutPage,
     ContactPage,
+
     HomePage,
     TabsPage,
     LoginPage
