@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {ModalController, NavController, NavParams} from 'ionic-angular';
+import {PrivacyPage} from '../privacy/privacy'
+import {GeneralPage} from '../general/general'
 
 
 /**
@@ -9,18 +11,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-settings',
-  templateUrl: 'settings.html',
+  templateUrl: 'settings.html'
 })
 export class SettingsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingsPage');
   }
 
+  presentPrivacy(){
+    let modal = this.modalCtrl.create(PrivacyPage);
+    modal.present();
+  }
+
+  presentGeneral(){
+    let modal = this.modalCtrl.create(GeneralPage);
+    modal.present();
+  }
 }
