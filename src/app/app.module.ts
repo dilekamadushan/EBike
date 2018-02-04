@@ -8,12 +8,14 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { SettingsPage } from '../pages/settings/settings';
 import { TabsPage } from '../pages/tabs/tabs';
-
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
 import {LoginPage} from "../pages/login/login";
 import {PrivacyPage} from "../pages/privacy/privacy";
 import {GeneralPage} from "../pages/general/general";
+import {ModeSelectionPage} from "../pages/mode-selection/mode-selection";
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import {GeneralPage} from "../pages/general/general";
     SettingsPage,
     PrivacyPage,
     GeneralPage,
+    ModeSelectionPage,
 
     HomePage,
     TabsPage,
@@ -41,6 +44,7 @@ import {GeneralPage} from "../pages/general/general";
     SettingsPage,
     PrivacyPage,
     GeneralPage,
+    ModeSelectionPage,
 
     HomePage,
     TabsPage,
