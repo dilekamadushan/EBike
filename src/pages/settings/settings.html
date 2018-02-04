@@ -15,11 +15,31 @@
 
 <ion-content padding>
 
+  <ion-list>
+    <button ion-item (click)="presentGeneral()">
+      General
+    </button>
+  </ion-list>
+  <ion-list>
+    <button ion-item (click)="presentPrivacy()">
+      Privacy
+    </button>
+  </ion-list>
+  <ion-list>
+    <button ion-item (click)="presentModeSelection()">
+      Mode Selection
+    </button>
+  </ion-list>
   <ion-item>
-    <button (click)="presentPrivacy()">Click me</button>
+    <ion-label> Sam</ion-label>
+    <ion-toggle checked="false"></ion-toggle>
   </ion-item>
   <ion-item>
-    <button (click)="presentGeneral()">Click me2</button>
+    <ion-range [(ngModel)]="brightness">
+      <ion-icon range-left small name="sunny"></ion-icon>
+      <ion-icon range-right name="sunny"></ion-icon>
+    </ion-range>
   </ion-item>
+
 
 </ion-content>

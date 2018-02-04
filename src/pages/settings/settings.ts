@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {ModalController, NavController, NavParams} from 'ionic-angular';
 import {PrivacyPage} from '../privacy/privacy'
 import {GeneralPage} from '../general/general'
+import {ModeSelectionPage} from '../mode-selection/mode-selection'
 
 
 /**
@@ -31,6 +32,10 @@ export class SettingsPage {
 
   presentGeneral(){
     let modal = this.modalCtrl.create(GeneralPage);
+    modal.present();
+  }
+  presentModeSelection(){
+    let modal = this.modalCtrl.create(ModeSelectionPage);
     modal.present();
   }
 }
