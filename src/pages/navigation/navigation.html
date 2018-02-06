@@ -5,23 +5,16 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
     <ion-title>Navigation</ion-title>
-    <ion-item>
-      <ion-label> GPS</ion-label>
-      <ion-toggle checked="false"></ion-toggle>
-    </ion-item>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
-  <ion-content>
-    <div #map id="map"></div>
-
-  </ion-content>
-
+<ion-content>
+  <div #map id="map" style="min-width: 310px; max-width: 400px; height: 100%; margin: 0 auto"></div>
 </ion-content>
