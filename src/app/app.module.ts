@@ -12,6 +12,7 @@ import {LoginPage} from "../pages/login/login";
 import {PrivacyPage} from "../pages/privacy/privacy";
 import {GeneralPage} from "../pages/general/general";
 import {ModeSelectionPage} from "../pages/mode-selection/mode-selection";
+import {NavigationPage} from "../pages/navigation/navigation";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,6 +27,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PrivacyPage,
     GeneralPage,
     ModeSelectionPage,
+    NavigationPage,
 
     HomePage,
     TabsPage,
@@ -45,6 +47,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PrivacyPage,
     GeneralPage,
     ModeSelectionPage,
+    NavigationPage,
 
     HomePage,
     TabsPage,
