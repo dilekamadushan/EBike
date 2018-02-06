@@ -18,7 +18,6 @@ export class HomePage {
 
   ionViewDidLoad() {
     HighCharts.chart('speedometer-container', {
-
         chart: {
           type: 'gauge',
           alignTicks: false,
@@ -29,7 +28,7 @@ export class HomePage {
         },
 
         title: {
-          text: ''
+          text: null
         },
 
         pane: {
