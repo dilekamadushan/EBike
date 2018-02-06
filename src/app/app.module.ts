@@ -8,6 +8,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { SettingsPage } from '../pages/settings/settings';
 import { TabsPage } from '../pages/tabs/tabs';
+import { ProgressBarComponent} from "../components/progress-bar/progress-bar";
 import {LoginPage} from "../pages/login/login";
 import {PrivacyPage} from "../pages/privacy/privacy";
 import {GeneralPage} from "../pages/general/general";
@@ -31,8 +32,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
 
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
