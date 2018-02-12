@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>mode</ion-title>
+    <ion-title>Mode</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,7 +15,7 @@
 
 <ion-content class="card-background-page">
 
-  <ion-card>
+  <!--<ion-card>
     <img src="../../assets/imgs/cycle1.jpg"/>
     <div class="card-title">São Paulo</div>
     <div class="card-subtitle">41 Listings</div>
@@ -31,6 +31,37 @@
     <img src="../../assets/imgs/cycle1.jpg"/>
     <div class="card-title">San Francisco</div>
     <div class="card-subtitle">72 Listings</div>
+  </ion-card>-->
+  <ion-card>
+    <ion-card-header>
+      Select Mode
+    </ion-card-header>
+
+    <ion-list radio-group>
+      <ion-item>
+        <ion-label>Eco</ion-label>
+        <ion-icon name="leaf" item-start></ion-icon>
+        <ion-radio checked="true" value="go"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sport</ion-label>
+        <ion-icon name="bicycle" item-start></ion-icon>
+        <ion-radio value="rust"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>PA</ion-label>
+        <ion-icon name="cart" item-start></ion-icon>
+        <ion-radio value="python"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Smart</ion-label>
+        <ion-icon name="happy" item-start></ion-icon>
+        <ion-radio value="smart"></ion-radio>
+      </ion-item>
+    </ion-list>
   </ion-card>
+
 
 </ion-content>
