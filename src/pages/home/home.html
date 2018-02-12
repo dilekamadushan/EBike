@@ -7,27 +7,27 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content style="background: url(http://www.highcharts.com/samples/graphics/sand.png);">
   <ion-grid>
     <ion-row class="battery-indicator">
-      <ion-col col-12>
+      <ion-col col-12 style="padding: 0">
         <progress-bar [progress]=55></progress-bar>
       </ion-col>
     </ion-row>
 
     <ion-row class="speed-indicator">
-      <ion-col col-12>
+      <ion-col col-12 style="padding: 0">
         <div id="speedometer-container"
-             style="min-width: 310px; max-width: 400px; max-height: 400px; min-height: 310px;"></div>
+             style="min-width: 310px; max-width: 400px; max-height: 400px; min-height: 310px;margin: 0 auto;"></div>
       </ion-col>
     </ion-row>
 
     <ion-row class="health-indicator">
       <ion-col col-6 class="heart-rate">
-        <ion-icon name="heart" color="light" style="font-size: 40px;"><br>78</ion-icon>
+        <ion-icon name="heart" color="light" style="font-size: 35px;"><br>78</ion-icon>
       </ion-col>
       <ion-col col-6 class="distance-indicator">
-        <ion-icon name="bicycle" color="light" style="font-size: 40px;"><br>20KM</ion-icon>
+        <ion-icon name="bicycle" color="light" style="font-size: 35px;"><br>20KM</ion-icon>
       </ion-col>
     </ion-row>
 
