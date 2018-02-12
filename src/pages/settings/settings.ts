@@ -38,4 +38,5 @@ export class SettingsPage {
     let modal = this.modalCtrl.create(ModeSelectionPage);
     modal.present();
   }
+
 }
