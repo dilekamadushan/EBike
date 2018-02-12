@@ -1,3 +1,29 @@
 page-home {
 
 }
+
+ion-grid {
+  height: 100%;
+}
+
+.battery-indicator {
+  height: 15%;
+}
+
+.speed-indicator {
+  height: 65%;
+}
+
+.health-indicator {
+  height: 20%;
+}
+
+.heart-rate {
+  background-color: rgba(255, 65, 65, 0.71);
+  text-align: center;
+}
+
+.distance-indicator {
+  background-color: #488aff;
+  text-align: center;
+}
