@@ -3,9 +3,9 @@ progress-bar {
     width: 100%;
     padding: 3px;
     text-align: center;
-    background-color: #f4f4f4;
-    border: 1px solid #dcdcdc;
-    color: #fff;
+    background-color: map-get($colors, light);
+    border: 1px solid map-get($colors, light);
+    color: map-get($colors, light);
     border-radius: 5px;
   }
 
