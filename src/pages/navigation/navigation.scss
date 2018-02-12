@@ -1,4 +1,15 @@
 page-navigation {
+  #floating-panel {
+    position: absolute;
+    right: 5px;
+    z-index: 5;
+    background-color: transparent;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+  }
   #map {
     height:340px;
     width:380px;
