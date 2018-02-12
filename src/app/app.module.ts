@@ -17,6 +17,7 @@ import {NavigationPage} from "../pages/navigation/navigation";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {ModePage} from "../pages/mode/mode";
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     LoginPage,
+    ModePage,
 
     ProgressBarComponent
   ],
@@ -53,7 +55,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    ModePage
   ],
   providers: [
     StatusBar,
