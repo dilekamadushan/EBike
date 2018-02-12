@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, ViewController} from 'ionic-angular';
 
 /**
  * Generated class for the ModeSelectionPage page.
@@ -8,18 +8,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-mode-selection',
   templateUrl: 'mode-selection.html',
 })
 export class ModeSelectionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ModeSelectionPage');
+  }
+
+  closePage() {
+    this.viewCtrl.dismiss();
   }
 
 }
