@@ -28,7 +28,7 @@ export class NavigationPage {
   }
 
   readData(){
-    this.http.get('../../assets/mapStyle.json').map(res => res.json()).subscribe(data => {
+    this.http.get('assets/mapStyle.json').map(res => res.json()).subscribe(data => {
       this.initMap(data);
     });
   }
@@ -42,7 +42,8 @@ export class NavigationPage {
       fullscreenControlOptions: {
         position: google.maps.ControlPosition.LEFT_TOP
       },
-      styles: mapStyle
+      styles: mapStyle,
+      gestureHandling: 'greedy'
     });
 
     // take location from the browser
@@ -65,6 +66,7 @@ export class NavigationPage {
     this.directionsDisplay.setMap(this.map);
   }
 
+  // custom locate controller
   centerControl(controlDiv, map) {
 
     // Set CSS for the control border.
@@ -91,7 +93,19 @@ export class NavigationPage {
     controlUI.appendChild(controlText);
 
     controlUI.addEventListener('click', function() {
-      console.log("controller listerner")
+      console.log("controller listerner");
+      if (navigator.geolocation) {
+        console.log("Device supports Geolocation");
+        navigator.geolocation.getCurrentPosition(function(position) {
+          let pos = new google.maps.LatLng(position.coords.latitude,
+            position.coords.longitude);
+          map.setCenter(pos);
+          map.setZoom(15);
+        });
+      } else {
+        // Device doesn't support Geolocation
+        console.log("Device doesn't support Geolocation");
+      }
     });
 
   }
