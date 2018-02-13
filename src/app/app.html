@@ -1,9 +1,17 @@
-<ion-menu [content]="mycontent">
-  <ion-toolbar>
-    <ion-title>Pages</ion-title>
-  </ion-toolbar>
-  <ion-content>
+<ion-menu [content]="mycontent" id="menu-material">
 
+  <ion-content style="background: url(../assets/imgs/background.png);">
+    <div class="menu-header">
+      <p class="name">Example Name</p>
+      <p class="e-mail">example@email.com</p>
+    </div>
+    <ion-list>
+      <ion-list>
+        <button menuClose ion-item *ngFor="let p of pages" [class.highlight]="p.active" (click)="openPage(p)">
+          <ion-icon name={{p.icon}}> {{p.title}}</ion-icon>
+        </button>
+      </ion-list>
+    </ion-list>
   </ion-content>
 </ion-menu>
 

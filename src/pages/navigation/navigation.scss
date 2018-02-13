@@ -6,15 +6,21 @@ page-navigation {
     background-color: transparent;
     padding: 5px;
     text-align: center;
-    font-family: 'Roboto','sans-serif';
+    font-family: 'Roboto', 'sans-serif';
     line-height: 30px;
     padding-left: 10px;
   }
+
   #map {
-    height:340px;
-    width:380px;
+    height: 340px;
+    width: 380px;
     padding-left: 0px;
 
+  }
+
+  .item-md.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: 0px;
   }
 
 }
