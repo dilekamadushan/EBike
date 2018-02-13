@@ -1,19 +1,15 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {Http} from "@angular/http";
+import "rxjs/add/operator/map";
 
 declare var google;
-
-/**
- * Generated class for the NavigationPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @Component({
   selector: 'page-navigation',
   templateUrl: 'navigation.html',
 })
+
 export class NavigationPage {
   @ViewChild('map') mapElement: ElementRef;
   map: any;
@@ -22,24 +18,31 @@ export class NavigationPage {
   directionsService = new google.maps.DirectionsService;
   directionsDisplay = new google.maps.DirectionsRenderer;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http) {
   }
 
   ionViewDidLoad() {
-    this.initMap();
+    this.readData();
     let bikeLayer = new google.maps.BicyclingLayer();
     bikeLayer.setMap(this.map);
   }
 
-  initMap() {
+  readData(){
+    this.http.get('../../assets/mapStyle.json').map(res => res.json()).subscribe(data => {
+      this.initMap(data);
+    });
+  }
+
+  initMap(mapStyle) {
     this.map = new google.maps.Map(this.mapElement.nativeElement, {
-      zoom: 7,
-      center: {lat: 7.8731, lng:80.7718},
+      zoom: 10,
+      center: {lat: 7.8731, lng: 80.7718},
       disableDefaultUI: true,
       fullscreenControl: true,
       fullscreenControlOptions: {
         position: google.maps.ControlPosition.LEFT_TOP
-      }
+      },
+      styles: mapStyle
     });
 
     this.directionsDisplay.setMap(this.map);

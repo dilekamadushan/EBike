@@ -19,6 +19,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {ModePage} from "../pages/mode/mode";
 import {ProfilePage} from "../pages/profile/profile";
+import {HttpModule} from "@angular/http";
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {ProfilePage} from "../pages/profile/profile";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
