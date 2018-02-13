@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ModalController, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, ModalController, NavController, NavParams} from 'ionic-angular';
 import {PrivacyPage} from '../privacy/privacy'
 import {GeneralPage} from '../general/general'
 import {AboutPage} from '../about/about'
@@ -11,6 +11,8 @@ import {AboutPage} from '../about/about'
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
+
+@IonicPage()
 
 @Component({
   selector: 'page-settings',
