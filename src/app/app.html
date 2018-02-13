@@ -6,18 +6,11 @@
       <p class="e-mail">example@email.com</p>
     </div>
     <ion-list>
-      <button ion-item (click)="openPage(profilePage)">
-        <ion-icon name="person"> Profile</ion-icon>
-      </button>
-      <button ion-item (click)="openPage(settingsPage)">
-        <ion-icon name="settings"> Settings</ion-icon>
-      </button>
-      <button ion-item (click)="openPage(aboutPage)">
-        <ion-icon name="information-circle"> About</ion-icon>
-      </button>
-      <button ion-item (click)="openPage(loginPage)">
-        <ion-icon name="log-out"> Logout</ion-icon>
-      </button>
+      <ion-list>
+        <button menuClose ion-item *ngFor="let p of pages" [class.highlight]="p.active" (click)="openPage(p)">
+          <ion-icon name={{p.icon}}> {{p.title}}</ion-icon>
+        </button>
+      </ion-list>
     </ion-list>
   </ion-content>
 </ion-menu>

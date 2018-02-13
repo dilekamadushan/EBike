@@ -18,6 +18,7 @@ import {NavigationPage} from "../pages/navigation/navigation";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {ModePage} from "../pages/mode/mode";
+import {ProfilePage} from "../pages/profile/profile";
 
 
 @NgModule({
@@ -25,7 +26,6 @@ import {ModePage} from "../pages/mode/mode";
     MyApp,
     AboutPage,
     ContactPage,
-    SettingsPage,
     PrivacyPage,
     GeneralPage,
     ModeSelectionPage,
@@ -47,7 +47,6 @@ import {ModePage} from "../pages/mode/mode";
     MyApp,
     AboutPage,
     ContactPage,
-    SettingsPage,
     PrivacyPage,
     GeneralPage,
     ModeSelectionPage,
