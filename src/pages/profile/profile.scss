@@ -45,7 +45,7 @@ page-profile {
     float: left;
     position: absolute;
     width: 100%;
-    height: 40vh;
+    height: 80vh;
     background: #fff;
     z-index: 1;
     box-shadow: 0 0 5px rgba(black, 0.1);
@@ -53,6 +53,7 @@ page-profile {
       height: $visual-height;
       overflow: hidden;
       position: relative;
+      background: map-get($colors, primary);
       &:before,
       &:after {
         display: block;
@@ -61,6 +62,7 @@ page-profile {
         height: 100%;
         position: absolute;
         z-index: 0;
+        background: url(../../assets/imgs/avatar/cosima-avatar.jpg) no-repeat center center/cover;
         opacity: 0.5;
         mix-blend-mode: lighten;
       }
