@@ -27,16 +27,24 @@ export class NavigationPage {
 
   ionViewDidLoad() {
     this.initMap();
+    let bikeLayer = new google.maps.BicyclingLayer();
+    bikeLayer.setMap(this.map);
   }
 
   initMap() {
     this.map = new google.maps.Map(this.mapElement.nativeElement, {
       zoom: 7,
-      center: {lat: 6.9270, lng:79.861244}
+      center: {lat: 7.8731, lng:80.7718},
+      disableDefaultUI: true,
+      fullscreenControl: true,
+      fullscreenControlOptions: {
+        position: google.maps.ControlPosition.LEFT_TOP
+      }
     });
 
     this.directionsDisplay.setMap(this.map);
   }
+
   calculateAndDisplayRoute() {
     this.directionsService.route({
       origin: this.start,
