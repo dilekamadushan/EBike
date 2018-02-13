@@ -13,6 +13,7 @@ export class TabsPage {
   tab1Root = HomePage;
   tab2Root = NavigationPage;
   tab3Root = ModePage;
+  tab4Root = SettingsPage;
 
 
   constructor() {
