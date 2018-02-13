@@ -1,20 +1,21 @@
-<ion-menu [content]="mycontent">
+<ion-menu [content]="mycontent" id="menu-material">
 
   <ion-content style="background: url(../assets/imgs/background.png);">
-    <ion-toolbar>
-      <ion-title>EBIKE</ion-title>
-    </ion-toolbar>
+    <div class="menu-header">
+      <p class="name">Example Name</p>
+      <p class="e-mail">example@email.com</p>
+    </div>
     <ion-list>
-      <button ion-item (click)="openPage(homePage)">
+      <button ion-item (click)="openPage(profilePage)">
         <ion-icon name="person"> Profile</ion-icon>
       </button>
-      <button ion-item (click)="openPage(homePage)">
+      <button ion-item (click)="openPage(settingsPage)">
         <ion-icon name="settings"> Settings</ion-icon>
       </button>
-      <button ion-item (click)="openPage(homePage)">
+      <button ion-item (click)="openPage(aboutPage)">
         <ion-icon name="information-circle"> About</ion-icon>
       </button>
-      <button ion-item (click)="openPage(homePage)">
+      <button ion-item (click)="openPage(loginPage)">
         <ion-icon name="log-out"> Logout</ion-icon>
       </button>
     </ion-list>
