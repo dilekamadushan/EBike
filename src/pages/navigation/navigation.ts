@@ -45,7 +45,55 @@ export class NavigationPage {
       styles: mapStyle
     });
 
+    // take location from the browser
+    if (navigator.geolocation) {
+      console.log("Device supports Geolocation");
+      navigator.geolocation.getCurrentPosition(function(position) {
+        let pos = new google.maps.LatLng(position.coords.latitude,
+          position.coords.longitude);
+      });
+    } else {
+      // Device doesn't support Geolocation
+      console.log("Device doesn't support Geolocation");
+    }
+
+    let centerControlDiv = document.createElement('div');
+    let centerControlFun = new this.centerControl(centerControlDiv, this.map);
+
+    this.map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(centerControlDiv);
+
     this.directionsDisplay.setMap(this.map);
+  }
+
+  centerControl(controlDiv, map) {
+
+    // Set CSS for the control border.
+    let controlUI = document.createElement('div');
+    controlUI.style.backgroundColor = '#fff';
+    controlUI.style.border = '2px solid #fff';
+    controlUI.style.borderRadius = '3px';
+    controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
+    controlUI.style.cursor = 'pointer';
+    controlUI.style.marginBottom = '22px';
+    controlUI.style.textAlign = 'center';
+    controlUI.title = 'Click to recenter the map';
+    controlDiv.appendChild(controlUI);
+
+    // Set CSS for the control interior.
+    let controlText = document.createElement('div');
+    controlText.style.color = 'rgb(25,25,25)';
+    controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+    controlText.style.fontSize = '16px';
+    controlText.style.lineHeight = '38px';
+    controlText.style.paddingLeft = '5px';
+    controlText.style.paddingRight = '5px';
+    controlText.innerHTML = 'Locate Me';
+    controlUI.appendChild(controlText);
+
+    controlUI.addEventListener('click', function() {
+      console.log("controller listerner")
+    });
+
   }
 
   calculateAndDisplayRoute() {
