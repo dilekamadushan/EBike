@@ -12,7 +12,40 @@
 
 </ion-header>
 
-
-<ion-content padding>
-
+<ion-content>
+  <ion-grid style="padding: 0">
+    <div class="card-profile">
+      <div class="card-profile_visual"></div>
+      <div class="card-profile_user-infos">
+        <span class="infos_name">Example Name</span>
+        <span class="infos_nick">example</span>
+        <a href="#"></a>
+      </div>
+      <div class="card-profile_user-stats">
+        <div class="stats-holder">
+          <div class="user-stats">
+            <strong>Tweets</strong>
+            <span>100</span>
+          </div>
+          <div class="user-stats">
+            <strong>Following</strong>
+            <span>200</span>
+          </div>
+          <div class="user-stats">
+            <strong>Followers</strong>
+            <span>300</span>
+          </div>
+        </div>
+      </div>
+      <div id="posts">
+        <ion-card>
+          <ion-row>
+            <ion-col col-12 style="padding: 0">
+              <div id="distance-history" style="width: 100%; height: 300px; margin: 0 auto"></div>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </div>
+    </div>
+  </ion-grid>
 </ion-content>
