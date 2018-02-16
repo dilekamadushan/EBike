@@ -4,12 +4,6 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
 import {LoginPage} from "../pages/login/login";
-import {HomePage} from "../pages/home/home";
-import {NavigationPage} from "../pages/navigation/navigation";
-import {ModePage} from "../pages/mode/mode";
-import {ProfilePage} from "../pages/profile/profile";
-import {SettingsPage} from "../pages/settings/settings";
-import {AboutPage} from "../pages/about/about";
 import {Subject} from "rxjs/Subject";
 
 @Component({
@@ -33,9 +27,9 @@ export class MyApp {
     });
 
     this.pages = [
-      {title: 'Dashboard', component: 'HomePage', active: false, icon: 'speedometer'},
-      {title: 'Navigation', component: 'NavigationPage', active: false, icon: 'compass'},
-      {title: 'Mode', component: 'ModePage', active: false, icon: 'switch'},
+      //{title: 'Dashboard', component: 'HomePage', active: false, icon: 'speedometer'},
+      //{title: 'Navigation', component: 'NavigationPage', active: false, icon: 'compass'},
+     // {title: 'Mode', component: 'ModePage', active: false, icon: 'switch'},
       {title: 'Profile', component: 'ProfilePage', active: false, icon: 'person'},
       {title: 'Settings', component: 'SettingsPage', active: false, icon: 'settings'},
       {title: 'About', component: 'AboutPage', active: false, icon: 'information-circle'},
@@ -53,7 +47,6 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.push(page.component);
-    
     this.activePage.next(page);
   }
 }
