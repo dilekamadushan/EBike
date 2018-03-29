@@ -18,13 +18,18 @@ import {TabsPage} from "../tabs/tabs";
 })
 export class LandingPage {
 
-  devices: any[] = ['00:15:83:31:68:00'];
+  devices: string[] = ["00:15:83:31:68:00"];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private toastCtrl: ToastController, private ble: BLE, private androidPermissions: AndroidPermissions) {
     // checking bluetooth enable
     ble.isEnabled().then(
       () => {
         console.log("Bluetooth already enabled");
+        this.toastCtrl.create({
+          message: 'Bluetooth already enabled',
+          duration: 3000,
+          position: 'middle'
+        }).present();
         this.scan();
       },
       (error) => {
@@ -35,6 +40,12 @@ export class LandingPage {
             console.log(value);
             ble.isEnabled().then(
               () => {
+                this.toastCtrl.create({
+                  message: 'Bluetooth enabled',
+                  duration: 3000,
+                  position: 'middle'
+                }).present();
+
                 this.scan();
               }
             )
@@ -48,12 +59,42 @@ export class LandingPage {
   }
 
   scan() {
-    this.ble.startScan(this.devices).subscribe(
-      (device) => this.ble.connect(device.id).subscribe(
-        (peripheral) => this.navCtrl.push(TabsPage, {
-          peripheral: peripheral
-        })
-      ));
+    // TODO : specify UUID
+    this.ble.startScan([]).subscribe(
+      (device) => {
+        this.toastCtrl.create({
+          message: 'Device found',
+          duration: 3000,
+          position: 'middle'
+        }).present();
+
+        this.ble.connect(device.id).subscribe(
+          (peripheral) => {
+            this.toastCtrl.create({
+              message: 'Device connected',
+              duration: 3000,
+              position: 'middle'
+            }).present();
+
+            this.navCtrl.push(TabsPage, { peripheral: peripheral });
+          },
+          (error) => {
+            this.toastCtrl.create({
+              message: 'Error in connect',
+              duration: 3000,
+              position: 'middle'
+            }).present();
+          }
+        );
+      },
+      (error) => {
+        this.toastCtrl.create({
+          message: 'Error in found',
+          duration: 3000,
+          position: 'middle'
+        }).present();
+      }
+    );
   }
 
   ionViewDidLoad() {
