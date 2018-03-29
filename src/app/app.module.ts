@@ -18,7 +18,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {HttpModule} from "@angular/http";
-
+import {BLE} from '@ionic-native/ble';
+import {AndroidPermissions} from "@ionic-native/android-permissions";
 
 @NgModule({
   declarations: [
@@ -56,6 +57,8 @@ import {HttpModule} from "@angular/http";
   providers: [
     StatusBar,
     SplashScreen,
+    BLE,
+    AndroidPermissions,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

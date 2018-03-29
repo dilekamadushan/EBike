@@ -1,6 +1,6 @@
 {
   "name": "bike",
-  "app_id": "",
+  "app_id": "68b22990",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

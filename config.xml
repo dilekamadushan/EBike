@@ -86,6 +86,9 @@
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDL0yUc6L7Wxv_rWPywkDqw2Imcs5P83Nk" />
         <variable name="PLAY_SERVICES_VERSION" value="11.8.+" />
     </plugin>
-    <engine name="android" spec="7.0.0" />
     <plugin name="cordova-plugin-ble-central" spec="^1.1.4" />
+    <plugin name="cordova-plugin-compat" spec="^1.2.0" />
+    <plugin name="cordova-plugin-android-permissions" spec="^1.0.0" />
+    <engine name="android" spec="7.0.0" />
+    <engine name="browser" spec="5.0.3" />
 </widget>
