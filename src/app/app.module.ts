@@ -20,6 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {HttpModule} from "@angular/http";
 import {BLE} from '@ionic-native/ble';
 import {AndroidPermissions} from "@ionic-native/android-permissions";
+import {LandingPage} from "../pages/landing/landing";
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {AndroidPermissions} from "@ionic-native/android-permissions";
     HomePage,
     TabsPage,
     LoginPage,
+    LandingPage,
 
     ProgressBarComponent
   ],
@@ -52,7 +54,8 @@ import {AndroidPermissions} from "@ionic-native/android-permissions";
 
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    LandingPage
   ],
   providers: [
     StatusBar,
