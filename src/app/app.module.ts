@@ -9,7 +9,6 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {HttpModule} from "@angular/http";
 import {BLE} from '@ionic-native/ble';
 import {AndroidPermissions} from "@ionic-native/android-permissions";
-import {ProgressBarComponent} from "../components/progress-bar/progress-bar";
 
 @NgModule({
   declarations: [
