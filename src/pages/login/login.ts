@@ -1,6 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {TabsPage} from "../tabs/tabs";
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 
 /**
  * Generated class for the LoginPage page.
@@ -9,15 +8,16 @@ import {TabsPage} from "../tabs/tabs";
  * Ionic pages and navigation.
  */
 
-
+@IonicPage()
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',
 })
+
 export class LoginPage {
 
-  @ViewChild('username') uname;
-  @ViewChild('password') pasword;
+  @ViewChild('username') username;
+  @ViewChild('password') password;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -26,9 +26,9 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  goToPages(){
-    console.log("llll"+this.uname.value);
-    this.navCtrl.push(TabsPage)
+  goToPages() {
+    console.log("Username is : " + this.username.value);
+    this.navCtrl.push('TabsPage');
   }
 
 }

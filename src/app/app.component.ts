@@ -3,17 +3,14 @@ import {MenuController, Nav, Platform} from 'ionic-angular';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 
-import {LoginPage} from "../pages/login/login";
 import {Subject} from "rxjs/Subject";
-
-import {LandingPage} from "../pages/landing/landing";
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage: any = LandingPage;
+  rootPage: any = 'LandingPage';
 
   activePage = new Subject();
 
@@ -29,9 +26,6 @@ export class MyApp {
     });
 
     this.pages = [
-      //{title: 'Dashboard', component: 'HomePage', active: false, icon: 'speedometer'},
-      //{title: 'Navigation', component: 'NavigationPage', active: false, icon: 'compass'},
-      // {title: 'Mode', component: 'ModePage', active: false, icon: 'switch'},
       {title: 'Profile', component: 'ProfilePage', active: false, icon: 'person'},
       {title: 'Settings', component: 'SettingsPage', active: false, icon: 'settings'},
       {title: 'About', component: 'AboutPage', active: false, icon: 'information-circle'},

@@ -1,10 +1,11 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {Http} from "@angular/http";
 import "rxjs/add/operator/map";
 
 declare var google;
 
+@IonicPage()
 @Component({
   selector: 'page-navigation',
   templateUrl: 'navigation.html',
@@ -12,9 +13,11 @@ declare var google;
 
 export class NavigationPage {
   @ViewChild('map') mapElement: ElementRef;
+  
   map: any;
   start = 'chicago, il';
   end = 'chicago, il';
+  
   directionsService = new google.maps.DirectionsService;
   directionsDisplay = new google.maps.DirectionsRenderer;
 

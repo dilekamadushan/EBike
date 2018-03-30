@@ -9,5 +9,9 @@ import { ModePage } from './mode';
   imports: [
     IonicPageModule.forChild(ModePage),
   ],
+  exports: [
+    ModePage
+  ]
 })
+
 export class ModePageModule {}

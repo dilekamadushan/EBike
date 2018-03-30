@@ -13,6 +13,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-mode',
   templateUrl: 'mode.html',
 })
+
 export class ModePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

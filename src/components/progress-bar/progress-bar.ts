@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 /**
  * Generated class for the ProgressBarComponent component.
@@ -17,5 +17,4 @@ export class ProgressBarComponent {
   constructor() {
 
   }
-
 }

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {IonicPage, NavController} from 'ionic-angular';
 import * as HighCharts from 'highcharts';
 import * as HighChartsMore from 'highcharts/highcharts-more';
 import * as SolidGauge from 'highcharts/modules/solid-gauge';
@@ -7,10 +7,12 @@ import * as SolidGauge from 'highcharts/modules/solid-gauge';
 HighChartsMore(HighCharts);
 SolidGauge(HighCharts);
 
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
 
   constructor(public navCtrl: NavController) {
@@ -18,14 +20,14 @@ export class HomePage {
 
   ionViewDidLoad() {
     /* global document */
-// Load the fonts
+    /* Load the fonts */
     HighCharts.createElement('link', {
       href: 'https://fonts.googleapis.com/css?family=Signika:400,700',
       rel: 'stylesheet',
       type: 'text/css'
     }, null, document.getElementsByTagName('head')[0]);
 
-// Add the background image to the container
+    /* Add the background image to the container */
     HighCharts.wrap(HighCharts.Chart.prototype, 'getContainer', function (proceed) {
       proceed.call(this);
       this.container.style.background =
